@@ -6,7 +6,6 @@ def show_usage
 end
 
 def check_args(args)
-  a0 = Integer(args[0])
   a1 = Integer(args[1])
   args.count == 2 && a1 >= 0
 rescue StandardError
