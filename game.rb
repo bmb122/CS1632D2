@@ -1,25 +1,27 @@
 require_relative 'graph.rb'
 # Documentation for class
 class Game
-  attr_accessor :seed, :prospectors
+  attr_accessor :seed, :prospectors, :metals, :earnings, :days, :loc, :iterations
 
   def initialize(seed, num_prospectors)
     srand seed
     @seed = rand(seed)
     @prospectors = num_prospectors
     @g = Graph.new []
+		create_map(@g)
     @days = 0
     @metals = [0, 0]
     @r = Random.new(@seed)
+		@earnings = 0
   end
 
   def play_game
-    create_map(@g)
-    i = 0
+    @iterations = 0
     loop do
-      i += 1
-      search(i)
-      break if i == @prospectors
+      @iterations += 1
+      search(@iterations)
+			end_shift(1.31, 20.67, @iterations)
+      break if @iterations == @prospectors
     end
   end
 
@@ -42,17 +44,17 @@ class Game
   end
 
   def search(pros)
-    loc = 0
+    @loc = 0
     @metals = [0, 0]
     @days = 0
     pre_vert = ''
     vert = @g.vertices[0]
     puts "\n" + 'Prospector #' + pros.to_s + ' starting in ' + vert.name + '.'
     loop do
-      loc += 1
-      break if loc > 5
+      @loc += 1
+      break if @loc > 5
 
-      if loc != 1
+      if @loc != 1
         goz = 'ounce(s)'
         soz = 'ounce(s)'
         puts 'Heading from ' + pre_vert.name + ' to ' + vert.name + ', holding ' + @metals[1].to_s + ' ' + goz + ' of gold and ' + @metals[0].to_s + ' ' + soz + ' of silver.'
@@ -67,7 +69,6 @@ class Game
         end
       end
     end
-		end_shift(1.31, 20.67, pros)
   end
 
   def keep_searching(vert, loc)
@@ -98,7 +99,7 @@ class Game
   end
 
   def end_shift(silverp, goldp, prospector)
-    earnings = @metals[0] * silverp + @metals[1] * goldp
+    @earnings = @metals[0] * silverp + @metals[1] * goldp
     puts 'After ' + @days.to_s + ' days, Prospector #' + prospector.to_s + ' returned to San Francisco with: '
     puts "\t" + @metals[1].to_s + ' ounce(s) of gold.'
     puts "\t" + @metals[0].to_s + ' ounce(s) of silver.'
