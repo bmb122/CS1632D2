@@ -59,7 +59,8 @@ class Game
         @goz = 'ounces' if @metals[1] != 1
         @soz = 'ounce' if @metals[0] == 1
         @soz = 'ounces' if @metals[0] != 1
-        puts 'Heading from ' + pre_vert.name + ' to ' + vert.name + ', holding ' + @metals[1].to_s + ' ' + @goz + ' of gold and ' + @metals[0].to_s + ' ' + @soz + ' of silver.'
+        puts 'Heading from ' + pre_vert.name + ' to ' + vert.name + ', holding ' + @metals[1].to_s + ' ' \
+				'' + @goz + ' of gold and ' + @metals[0].to_s + ' ' + @soz + ' of silver.'
       end
       keep_searching(vert, loc)
       loop do
@@ -105,7 +106,8 @@ class Game
         @goz = 'ounces' if g != 1
         @soz = 'ounce' if s == 1
         @soz = 'ounces' if s != 1
-        puts "\t" + 'Found ' + g.to_s + ' ' + @goz + ' of gold and ' + s.to_s + ' ' + @soz + ' of silver in ' + vert.name + '.'
+        puts "\t" + 'Found ' + g.to_s + ' ' + @goz + ' of gold and ' + s.to_s + ' ' \
+				'' + @soz + ' of silver in ' + vert.name + '.'
       end
     end
   end
