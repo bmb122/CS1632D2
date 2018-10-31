@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-10-30T16:24:04-04:00">2018-10-30T16:24:04-04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-10-31T10:16:03-04:00">2018-10-31T10:16:03-04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">99.05%</span></span>
+    (<span class="covered_percent"><span class="green">97.0%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         10.29
+         12.9
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>6</b> files in total.
-    <b>211</b> relevant lines. 
-    <span class="green"><b>209</b> lines covered</span> and
-    <span class="red"><b>2</b> lines missed </span>
+    <b>267</b> relevant lines. 
+    <span class="green"><b>259</b> lines covered</span> and
+    <span class="red"><b>8</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -72,20 +72,20 @@
       
       <tr>
         <td class="strong"><a href="#923bbde0e643a2aba863a2aa039ee5125efea25e" class="src_link" title="game.rb">game.rb</a></td>
-        <td class="green strong">97.59 %</td>
-        <td>108</td>
-        <td>83</td>
-        <td>81</td>
-        <td>2</td>
-        <td>6.8</td>
+        <td class="green strong">91.92 %</td>
+        <td>124</td>
+        <td>99</td>
+        <td>91</td>
+        <td>8</td>
+        <td>10.1</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#41d3fdf3babf12bf0854923a8e4aef56cdbbda8a" class="src_link" title="game_test.rb">game_test.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>141</td>
-        <td>67</td>
-        <td>67</td>
+        <td>210</td>
+        <td>107</td>
+        <td>107</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -97,7 +97,7 @@
         <td>18</td>
         <td>18</td>
         <td>0</td>
-        <td>82.9</td>
+        <td>127.2</td>
       </tr>
       
       <tr>
@@ -503,11 +503,11 @@
         <div class="source_table" id="923bbde0e643a2aba863a2aa039ee5125efea25e">
   <div class="header">
     <h3>game.rb</h3>
-    <h4><span class="green">97.59 %</span> covered</h4>
+    <h4><span class="green">91.92 %</span> covered</h4>
     <div>
-      <b>83</b> relevant lines. 
-      <span class="green"><b>81</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
+      <b>99</b> relevant lines. 
+      <span class="green"><b>91</b> lines covered</span> and
+      <span class="red"><b>8</b> lines missed.</span>
     </div>
   </div>
   
@@ -535,7 +535,7 @@
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
-          <code class="ruby">  attr_accessor :seed, :prospectors, :metals, :earnings, :days, :loc, :iterations</code>
+          <code class="ruby">  attr_accessor :seed, :prospectors, :metals, :earnings, :days, :loc, :iterations, :goz, :soz</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">
@@ -550,58 +550,58 @@
           <code class="ruby">  def initialize(seed, num_prospectors)</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="7">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="16" data-linenumber="7">
+          <span class="hits">16</span>
           
           <code class="ruby">    srand seed</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="8">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="16" data-linenumber="8">
+          <span class="hits">16</span>
           
           <code class="ruby">    @seed = rand(seed)</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="9">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="16" data-linenumber="9">
+          <span class="hits">16</span>
           
           <code class="ruby">    @prospectors = num_prospectors</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="10">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="16" data-linenumber="10">
+          <span class="hits">16</span>
           
           <code class="ruby">    @g = Graph.new []</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="11">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="16" data-linenumber="11">
+          <span class="hits">16</span>
           
-          <code class="ruby">		create_map(@g)</code>
+          <code class="ruby">    create_map(@g)</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="12">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="16" data-linenumber="12">
+          <span class="hits">16</span>
           
           <code class="ruby">    @days = 0</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="13">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="16" data-linenumber="13">
+          <span class="hits">16</span>
           
           <code class="ruby">    @metals = [0, 0]</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="14">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="16" data-linenumber="14">
+          <span class="hits">16</span>
           
           <code class="ruby">    @r = Random.new(@seed)</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="15">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="16" data-linenumber="15">
+          <span class="hits">16</span>
           
-          <code class="ruby">		@earnings = 0</code>
+          <code class="ruby">    @earnings = 0</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
@@ -649,7 +649,7 @@
         <li class="covered" data-hits="10" data-linenumber="23">
           <span class="hits">10</span>
           
-          <code class="ruby">			end_shift(1.31, 20.67, @iterations)</code>
+          <code class="ruby">      end_shift(1.31, 20.67, @iterations)</code>
         </li>
       
         <li class="covered" data-hits="10" data-linenumber="24">
@@ -682,92 +682,92 @@
           <code class="ruby">  def create_map(graph)</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="29">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="17" data-linenumber="29">
+          <span class="hits">17</span>
           
           <code class="ruby">    graph.add_vertex &#39;Sutter Creek&#39;, 0, 2</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="30">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="17" data-linenumber="30">
+          <span class="hits">17</span>
           
           <code class="ruby">    graph.add_vertex &#39;Coloma&#39;, 0, 3</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="31">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="17" data-linenumber="31">
+          <span class="hits">17</span>
           
           <code class="ruby">    graph.add_vertex &#39;Angels Camp&#39;, 0, 4</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="32">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="17" data-linenumber="32">
+          <span class="hits">17</span>
           
           <code class="ruby">    graph.add_vertex &#39;Nevada City&#39;, 0, 5</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="33">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="17" data-linenumber="33">
+          <span class="hits">17</span>
           
           <code class="ruby">    graph.add_vertex &#39;Virginia City&#39;, 3, 3</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="34">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="17" data-linenumber="34">
+          <span class="hits">17</span>
           
           <code class="ruby">    graph.add_vertex &#39;Midas&#39;, 5, 0</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="35">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="17" data-linenumber="35">
+          <span class="hits">17</span>
           
           <code class="ruby">    graph.add_vertex &#39;El Dorado Canyon&#39;, 10, 0</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="36">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="17" data-linenumber="36">
+          <span class="hits">17</span>
           
           <code class="ruby">    graph.add_neighbor &#39;Sutter Creek&#39;, &#39;Coloma&#39;</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="37">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="17" data-linenumber="37">
+          <span class="hits">17</span>
           
           <code class="ruby">    graph.add_neighbor &#39;Sutter Creek&#39;, &#39;Angels Camp&#39;</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="38">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="17" data-linenumber="38">
+          <span class="hits">17</span>
           
           <code class="ruby">    graph.add_neighbor &#39;Coloma&#39;, &#39;Virginia City&#39;</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="39">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="17" data-linenumber="39">
+          <span class="hits">17</span>
           
           <code class="ruby">    graph.add_neighbor &#39;Angels Camp&#39;, &#39;Nevada City&#39;</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="40">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="17" data-linenumber="40">
+          <span class="hits">17</span>
           
           <code class="ruby">    graph.add_neighbor &#39;Angels Camp&#39;, &#39;Virginia City&#39;</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="41">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="17" data-linenumber="41">
+          <span class="hits">17</span>
           
           <code class="ruby">    graph.add_neighbor &#39;Virginia City&#39;, &#39;Midas&#39;</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="42">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="17" data-linenumber="42">
+          <span class="hits">17</span>
           
           <code class="ruby">    graph.add_neighbor &#39;Virginia City&#39;, &#39;El Dorado Canyon&#39;</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="43">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="17" data-linenumber="43">
+          <span class="hits">17</span>
           
           <code class="ruby">    graph.add_neighbor &#39;Midas&#39;, &#39;El Dorado Canyon&#39;</code>
         </li>
@@ -790,56 +790,56 @@
           <code class="ruby">  def search(pros)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="47">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="4" data-linenumber="47">
+          <span class="hits">4</span>
           
           <code class="ruby">    @loc = 0</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="48">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="4" data-linenumber="48">
+          <span class="hits">4</span>
           
           <code class="ruby">    @metals = [0, 0]</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="49">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="4" data-linenumber="49">
+          <span class="hits">4</span>
           
           <code class="ruby">    @days = 0</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="50">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="4" data-linenumber="50">
+          <span class="hits">4</span>
           
           <code class="ruby">    pre_vert = &#39;&#39;</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="51">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="4" data-linenumber="51">
+          <span class="hits">4</span>
           
           <code class="ruby">    vert = @g.vertices[0]</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="52">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="4" data-linenumber="52">
+          <span class="hits">4</span>
           
           <code class="ruby">    puts &quot;\n&quot; + &#39;Prospector #&#39; + pros.to_s + &#39; starting in &#39; + vert.name + &#39;.&#39;</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="53">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="4" data-linenumber="53">
+          <span class="hits">4</span>
           
           <code class="ruby">    loop do</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="54">
-          <span class="hits">12</span>
+        <li class="covered" data-hits="24" data-linenumber="54">
+          <span class="hits">24</span>
           
           <code class="ruby">      @loc += 1</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="55">
-          <span class="hits">12</span>
+        <li class="covered" data-hits="24" data-linenumber="55">
+          <span class="hits">24</span>
           
           <code class="ruby">      break if @loc &gt; 5</code>
         </li>
@@ -850,313 +850,409 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="57">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="20" data-linenumber="57">
+          <span class="hits">20</span>
           
           <code class="ruby">      if @loc != 1</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="58">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="16" data-linenumber="58">
+          <span class="hits">16</span>
           
-          <code class="ruby">        goz = &#39;ounce(s)&#39;</code>
+          <code class="ruby">        @goz = &#39;ounce&#39; if @metals[1] == 1</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="59">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="16" data-linenumber="59">
+          <span class="hits">16</span>
           
-          <code class="ruby">        soz = &#39;ounce(s)&#39;</code>
+          <code class="ruby">        @goz = &#39;ounces&#39; if @metals[1] != 1</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="60">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="16" data-linenumber="60">
+          <span class="hits">16</span>
           
-          <code class="ruby">        puts &#39;Heading from &#39; + pre_vert.name + &#39; to &#39; + vert.name + &#39;, holding &#39; + @metals[1].to_s + &#39; &#39; + goz + &#39; of gold and &#39; + @metals[0].to_s + &#39; &#39; + soz + &#39; of silver.&#39;</code>
+          <code class="ruby">        @soz = &#39;ounce&#39; if @metals[0] == 1</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="61">
+        <li class="covered" data-hits="16" data-linenumber="61">
+          <span class="hits">16</span>
+          
+          <code class="ruby">        @soz = &#39;ounces&#39; if @metals[0] != 1</code>
+        </li>
+      
+        <li class="covered" data-hits="16" data-linenumber="62">
+          <span class="hits">16</span>
+          
+          <code class="ruby">        puts &#39;Heading from &#39; + pre_vert.name + &#39; to &#39; + vert.name + &#39;, holding &#39; + @metals[1].to_s + &#39; &#39; + @goz + &#39; of gold and &#39; + @metals[0].to_s + &#39; &#39; + @soz + &#39; of silver.&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="63">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="62">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="20" data-linenumber="64">
+          <span class="hits">20</span>
           
           <code class="ruby">      keep_searching(vert, loc)</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="63">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="20" data-linenumber="65">
+          <span class="hits">20</span>
           
           <code class="ruby">      loop do</code>
         </li>
       
-        <li class="covered" data-hits="38" data-linenumber="64">
-          <span class="hits">38</span>
+        <li class="covered" data-hits="76" data-linenumber="66">
+          <span class="hits">76</span>
           
           <code class="ruby">        next_site = @r.rand(8)</code>
         </li>
       
-        <li class="covered" data-hits="38" data-linenumber="65">
-          <span class="hits">38</span>
+        <li class="covered" data-hits="76" data-linenumber="67">
+          <span class="hits">76</span>
           
           <code class="ruby">        if vert.neighbors[next_site] == true</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="66">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="20" data-linenumber="68">
+          <span class="hits">20</span>
           
           <code class="ruby">          pre_vert = vert</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="67">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="20" data-linenumber="69">
+          <span class="hits">20</span>
           
           <code class="ruby">          vert = @g.vertices[next_site]</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="68">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="20" data-linenumber="70">
+          <span class="hits">20</span>
           
           <code class="ruby">          break</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="69">
-          
-          
-          <code class="ruby">        end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="70">
-          
-          
-          <code class="ruby">      end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="71">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">        end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="72">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">      end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="73">
           
           
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="74">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="75">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="74">
+        <li class="covered" data-hits="1" data-linenumber="76">
           <span class="hits">1</span>
           
           <code class="ruby">  def keep_searching(vert, loc)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="75">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="77">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    @goz = &#39;ounces&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="78">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    @soz = &#39;ounces&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="79">
+          <span class="hits">4</span>
           
           <code class="ruby">    ks = true</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="76">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="80">
+          <span class="hits">4</span>
           
           <code class="ruby">    g = 0</code>
-        </li>
-      
-        <li class="covered" data-hits="3" data-linenumber="77">
-          <span class="hits">3</span>
-          
-          <code class="ruby">    s = 0</code>
-        </li>
-      
-        <li class="covered" data-hits="3" data-linenumber="78">
-          <span class="hits">3</span>
-          
-          <code class="ruby">    loop do</code>
-        </li>
-      
-        <li class="covered" data-hits="7" data-linenumber="79">
-          <span class="hits">7</span>
-          
-          <code class="ruby">      return unless ks</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="80">
-          
-          
-          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="4" data-linenumber="81">
           <span class="hits">4</span>
           
-          <code class="ruby">      @days += 1 if ks</code>
+          <code class="ruby">    s = 0</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="82">
+        <li class="covered" data-hits="4" data-linenumber="82">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    loop do</code>
+        </li>
+      
+        <li class="covered" data-hits="9" data-linenumber="83">
+          <span class="hits">9</span>
+          
+          <code class="ruby">      return unless ks</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="84">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="83">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="5" data-linenumber="85">
+          <span class="hits">5</span>
+          
+          <code class="ruby">      @days += 1 if ks</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="86">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="87">
+          <span class="hits">5</span>
           
           <code class="ruby">      g = @r.rand(vert.gold + 1)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="84">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="5" data-linenumber="88">
+          <span class="hits">5</span>
           
           <code class="ruby">      s = @r.rand(vert.silver + 1)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="85">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="5" data-linenumber="89">
+          <span class="hits">5</span>
           
           <code class="ruby">      @metals[0] += s</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="86">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="5" data-linenumber="90">
+          <span class="hits">5</span>
           
           <code class="ruby">      @metals[1] += g</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="87">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="5" data-linenumber="91">
+          <span class="hits">5</span>
           
           <code class="ruby">      ks = false if loc &gt; 3 &amp;&amp; g &lt;= 1 &amp;&amp; s &lt;= 1</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="88">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="5" data-linenumber="92">
+          <span class="hits">5</span>
           
           <code class="ruby">      if g.zero? &amp;&amp; s.zero?</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="89">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="93">
+          <span class="hits">3</span>
           
           <code class="ruby">        puts &quot;\t&quot; + &#39;No precious metals were found&#39;</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="90">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="94">
+          <span class="hits">3</span>
           
           <code class="ruby">        ks = false</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="91">
+        <li class="covered" data-hits="2" data-linenumber="95">
           <span class="hits">2</span>
           
           <code class="ruby">      elsif g &gt; 0 &amp;&amp; s.zero?</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="92">
+        <li class="missed" data-hits="0" data-linenumber="96">
           
           
-          <code class="ruby">        puts &quot;\t&quot; + &#39;Found &#39; + g.to_s + &#39; ounce(s) of gold in &#39; + vert.name + &#39;.&#39;</code>
+          <code class="ruby">        @goz = &#39;ounce&#39; if g == 1</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="93">
+        <li class="missed" data-hits="0" data-linenumber="97">
+          
+          
+          <code class="ruby">        @goz = &#39;ounces&#39; if g != 1</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="98">
+          
+          
+          <code class="ruby">        puts &quot;\t&quot; + &#39;Found &#39; + g.to_s + &#39; &#39; + @goz + &#39; of gold in &#39; + vert.name + &#39;.&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="99">
           <span class="hits">2</span>
           
           <code class="ruby">      elsif s &gt; 0 &amp;&amp; g.zero?</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="94">
+        <li class="covered" data-hits="2" data-linenumber="100">
           <span class="hits">2</span>
           
-          <code class="ruby">        puts &quot;\t&quot; + &#39;Found &#39; + s.to_s + &#39; ounce(s) of silver in &#39; + vert.name + &#39;.&#39;</code>
+          <code class="ruby">        @soz = &#39;ounce&#39; if s == 1</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="95">
+        <li class="covered" data-hits="2" data-linenumber="101">
+          <span class="hits">2</span>
+          
+          <code class="ruby">        @soz = &#39;ounces&#39; if s != 1</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="102">
+          <span class="hits">2</span>
+          
+          <code class="ruby">        puts &quot;\t&quot; + &#39;Found &#39; + s.to_s + &#39; &#39; + @soz + &#39; of silver in &#39; + vert.name + &#39;.&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="103">
           
           
           <code class="ruby">      else</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="96">
+        <li class="missed" data-hits="0" data-linenumber="104">
           
           
-          <code class="ruby">        puts &quot;\t&quot; + &#39;Found &#39; + g.to_s + &#39; ounce(s) of gold and &#39; + s.to_s + &#39;ounce(s) of silver in &#39; + vert.name + &#39;.&#39;</code>
+          <code class="ruby">        @goz = &#39;ounce&#39; if g == 1</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="97">
+        <li class="missed" data-hits="0" data-linenumber="105">
+          
+          
+          <code class="ruby">        @goz = &#39;ounces&#39; if g != 1</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="106">
+          
+          
+          <code class="ruby">        @soz = &#39;ounce&#39; if s == 1</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="107">
+          
+          
+          <code class="ruby">        @soz = &#39;ounces&#39; if s != 1</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="108">
+          
+          
+          <code class="ruby">        puts &quot;\t&quot; + &#39;Found &#39; + g.to_s + &#39; &#39; + @goz + &#39; of gold and &#39; + s.to_s + &#39; &#39; + @soz + &#39; of silver in &#39; + vert.name + &#39;.&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="109">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="98">
+        <li class="never" data-hits="" data-linenumber="110">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="99">
+        <li class="never" data-hits="" data-linenumber="111">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="100">
+        <li class="never" data-hits="" data-linenumber="112">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="101">
+        <li class="covered" data-hits="1" data-linenumber="113">
           <span class="hits">1</span>
           
           <code class="ruby">  def end_shift(silverp, goldp, prospector)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="102">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="4" data-linenumber="114">
+          <span class="hits">4</span>
           
-          <code class="ruby">    @earnings = @metals[0] * silverp + @metals[1] * goldp</code>
+          <code class="ruby">    @goz = &#39;ounce&#39; if @metals[1] == 1</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="103">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="4" data-linenumber="115">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    @goz = &#39;ounces&#39; if @metals[1] != 1</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="116">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    @soz = &#39;ounce&#39; if @metals[0] == 1</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="117">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    @soz = &#39;ounces&#39; if @metals[0] != 1</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="118">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    @earnings = &#39;%.2f&#39; % (@metals[0] * silverp + @metals[1] * goldp)</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="119">
+          <span class="hits">4</span>
           
           <code class="ruby">    puts &#39;After &#39; + @days.to_s + &#39; days, Prospector #&#39; + prospector.to_s + &#39; returned to San Francisco with: &#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="104">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="4" data-linenumber="120">
+          <span class="hits">4</span>
           
-          <code class="ruby">    puts &quot;\t&quot; + @metals[1].to_s + &#39; ounce(s) of gold.&#39;</code>
+          <code class="ruby">    puts &quot;\t&quot; + @metals[1].to_s + &#39; &#39; + @goz + &#39; of gold.&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="105">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="4" data-linenumber="121">
+          <span class="hits">4</span>
           
-          <code class="ruby">    puts &quot;\t&quot; + @metals[0].to_s + &#39; ounce(s) of silver.&#39;</code>
+          <code class="ruby">    puts &quot;\t&quot; + @metals[0].to_s + &#39; &#39; + @soz + &#39; of silver.&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="106">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="4" data-linenumber="122">
+          <span class="hits">4</span>
           
-          <code class="ruby">    puts &quot;\t&quot; + &#39;Heading home with $&#39; + earnings.round(2).to_s + &#39;.&#39;</code>
+          <code class="ruby">    puts &quot;\t&quot; + &#39;Heading home with $&#39; + @earnings.to_s + &#39;.&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="107">
+        <li class="never" data-hits="" data-linenumber="123">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="108">
+        <li class="never" data-hits="" data-linenumber="124">
           
           
           <code class="ruby">end</code>
@@ -1172,8 +1268,8 @@
     <h3>game_test.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>67</b> relevant lines. 
-      <span class="green"><b>67</b> lines covered</span> and
+      <b>107</b> relevant lines. 
+      <span class="green"><b>107</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1466,313 +1562,313 @@
         <li class="never" data-hits="" data-linenumber="48">
           
           
-          <code class="ruby">	</code>
+          <code class="ruby">	# This test ensures that the prospector searches 5 locations</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="49">
           
           
-          <code class="ruby">	# This test ensures that if the prospector finds 0 ounces</code>
+          <code class="ruby">	# exactly. Once the counter exceeds this limit of 5, the search function</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="50">
           
           
-          <code class="ruby">	# of either silver or gold while searching,</code>
+          <code class="ruby">	# should caese entirely.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="51">
           
           
-          <code class="ruby">	# he/she will leave. With the vertex holding 0 for the values of</code>
+          <code class="ruby">	# EDGE CASE</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="52">
+        <li class="covered" data-hits="1" data-linenumber="52">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">	# silver and gold, the prospector will never find any. We check to</code>
+          <code class="ruby">	def test_search_five_iterations</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="53">
+        <li class="covered" data-hits="1" data-linenumber="53">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">	# make sure he/she leaves after the first day of not finding anything</code>
+          <code class="ruby">		game = Game.new 1, 1</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="54">
           <span class="hits">1</span>
           
-          <code class="ruby">	def test_keep_searching_find_no_metals</code>
+          <code class="ruby">		game.stub :keep_searching, true do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="55">
           <span class="hits">1</span>
           
-          <code class="ruby">		game = Game.new 1, 1</code>
+          <code class="ruby">			game.search(1)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="56">
           <span class="hits">1</span>
           
-          <code class="ruby">		vert = Minitest::Mock::new &quot;vert 1&quot;</code>
+          <code class="ruby">			refute_equal 5, game.loc</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="57">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="57">
           
-          <code class="ruby">		vert.expect :gold, 0</code>
+          
+          <code class="ruby">		end	</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="58">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="58">
           
-          <code class="ruby">		vert.expect :silver, 0</code>
+          
+          <code class="ruby">	end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="59">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="59">
           
-          <code class="ruby">		vert.expect :name, &#39;Gold Saucer&#39;</code>
+          
+          <code class="ruby">	</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="60">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="60">
           
-          <code class="ruby">		game.keep_searching(vert, 1)</code>
+          
+          <code class="ruby">	# This test ensures that the prospector only searches at 5 locations</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="61">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="61">
           
-          <code class="ruby">		assert_equal 1, game.days</code>
+          
+          <code class="ruby">	# exactly. Once the counter exceeds this limit of 5 (i.e. 6), the search function</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="62">
           
           
-          <code class="ruby">	end</code>
+          <code class="ruby">	# should caese entirely, therefore causing the loc variable to be six</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="63">
           
           
-          <code class="ruby">	</code>
+          <code class="ruby">	# when search halts.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="64">
           
           
-          <code class="ruby">	# This test ensures that if the prospector finds one ounce</code>
+          <code class="ruby">	# EDGE CASE</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="65">
+        <li class="covered" data-hits="1" data-linenumber="65">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">	# of either silver or gold in his/her first three days of searching,</code>
+          <code class="ruby">	def test_search_six_iterations</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="66">
+        <li class="covered" data-hits="1" data-linenumber="66">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">	# he/she will stay until no metals are found. With the specific seed generation of 1, </code>
+          <code class="ruby">		game = Game.new 1, 1</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="67">
+        <li class="covered" data-hits="1" data-linenumber="67">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">	# the prospector will find one ounce of silver and gold in the first day,</code>
+          <code class="ruby">		game.stub :keep_searching, true do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="68">
+        <li class="covered" data-hits="1" data-linenumber="68">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">	# then find nothing the second. We check to make sure he/she stays for the </code>
+          <code class="ruby">			game.search(1)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="69">
+        <li class="covered" data-hits="1" data-linenumber="69">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">	# second day at Gold Saucer</code>
+          <code class="ruby">			assert_equal 6, game.loc</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="70">
           
           
-          <code class="ruby">	# EDGE CASE</code>
+          <code class="ruby">		end	</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="71">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="71">
           
-          <code class="ruby">	def test_keep_searching_third_location</code>
+          
+          <code class="ruby">	end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="72">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="72">
           
-          <code class="ruby">		game = Game.new 1, 1</code>
+          
+          <code class="ruby">	</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="73">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="73">
           
-          <code class="ruby">		vert = Minitest::Mock::new &quot;vert 1&quot;</code>
+          
+          <code class="ruby">	# This test ensures that the correct singular form &#39;ounce&#39; is </code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="74">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="74">
           
-          <code class="ruby">		vert.expect :gold, 1</code>
+          
+          <code class="ruby">	# displayed when both silver and gold are one when displaying</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="75">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="75">
           
-          <code class="ruby">		vert.expect :gold, 0</code>
+          
+          <code class="ruby">	# the number of metals are found when the prospector is moving</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="76">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="76">
           
-          <code class="ruby">		vert.expect :silver, 1</code>
+          
+          <code class="ruby">	# from one location to another.</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="77">
           <span class="hits">1</span>
           
-          <code class="ruby">		vert.expect :silver, 0</code>
+          <code class="ruby">	def test_search_ounce</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="78">
           <span class="hits">1</span>
           
-          <code class="ruby">		vert.expect :name, &#39;Gold Saucer&#39;</code>
+          <code class="ruby">		game = Game.new 1, 1</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="79">
           <span class="hits">1</span>
           
-          <code class="ruby">		vert.expect :name, &#39;Gold Saucer&#39;</code>
+          <code class="ruby">		game.metals = [1, 1]</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="80">
           <span class="hits">1</span>
           
-          <code class="ruby">		game.keep_searching(vert, 3)</code>
+          <code class="ruby">		game.stub :keep_searching, true do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="81">
           <span class="hits">1</span>
           
-          <code class="ruby">		refute_equal 1, game.days</code>
+          <code class="ruby">			game.search(1)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="82">
+        <li class="covered" data-hits="1" data-linenumber="82">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">	end</code>
+          <code class="ruby">			assert &#39;ounce&#39;, game.goz</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="83">
+        <li class="covered" data-hits="1" data-linenumber="83">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">	</code>
+          <code class="ruby">			assert &#39;ounce&#39;, game.soz</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="84">
           
           
-          <code class="ruby">	# This test ensures that if the prospector finds one ounce or less</code>
+          <code class="ruby">		end	</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="85">
           
           
-          <code class="ruby">	# of either silver or gold in his/her last two days of searching,</code>
+          <code class="ruby">	end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="86">
           
           
-          <code class="ruby">	# he/she will leave. With the specific seed generation of 1, the prospector will</code>
+          <code class="ruby">	</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="87">
           
           
-          <code class="ruby">	# always only find one ounce of silver. We check to make sure he/she</code>
+          <code class="ruby">	# This test ensures that the correct plural form &#39;ounces&#39; is </code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="88">
           
           
-          <code class="ruby">	# leaves after only one day of searching.</code>
+          <code class="ruby">	# displayed when both silver and gold are two when displaying</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="89">
           
           
-          <code class="ruby">	# EDGE CASE</code>
+          <code class="ruby">	# the number of metals are found when the prospector is moving</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="90">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="90">
           
-          <code class="ruby">	def test_keep_searching_after_third_location</code>
+          
+          <code class="ruby">	# from one location to another.</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="91">
           <span class="hits">1</span>
           
-          <code class="ruby">		game = Game.new 1, 1</code>
+          <code class="ruby">	def test_search_ounces</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="92">
           <span class="hits">1</span>
           
-          <code class="ruby">		vert = Minitest::Mock::new &quot;vert 1&quot;</code>
+          <code class="ruby">		game = Game.new 1, 1</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="93">
           <span class="hits">1</span>
           
-          <code class="ruby">		vert.expect :gold, 1</code>
+          <code class="ruby">		game.metals = [2, 2]</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="94">
           <span class="hits">1</span>
           
-          <code class="ruby">		vert.expect :silver, 1</code>
+          <code class="ruby">		game.stub :keep_searching, true do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="95">
           <span class="hits">1</span>
           
-          <code class="ruby">		vert.expect :name, &#39;Gold Saucer&#39;</code>
+          <code class="ruby">			game.search(1)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="96">
           <span class="hits">1</span>
           
-          <code class="ruby">		game.keep_searching(vert, 4)</code>
+          <code class="ruby">			assert &#39;ounces&#39;, game.goz</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="97">
           <span class="hits">1</span>
           
-          <code class="ruby">		assert_equal 1, game.days</code>
+          <code class="ruby">			assert &#39;ounces&#39;, game.soz</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="98">
           
           
-          <code class="ruby">	end</code>
+          <code class="ruby">		end	</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="99">
           
           
-          <code class="ruby">	</code>
+          <code class="ruby">	end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="100">
@@ -1784,244 +1880,658 @@
         <li class="never" data-hits="" data-linenumber="101">
           
           
-          <code class="ruby">	# This test ensures that the prospector searches 5 locations</code>
+          <code class="ruby">	# This test ensures that if the prospector finds 0 ounces</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="102">
           
           
-          <code class="ruby">	# exactly. Once the counter exceeds this limit of 5, the search function</code>
+          <code class="ruby">	# of either silver or gold while searching,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="103">
           
           
-          <code class="ruby">	# should caese entirely.</code>
+          <code class="ruby">	# he/she will leave. With the vertex holding 0 for the values of</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="104">
           
           
-          <code class="ruby">	# EDGE CASE</code>
+          <code class="ruby">	# silver and gold, the prospector will never find any. We check to</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="105">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="105">
           
-          <code class="ruby">	def test_search_five_iterations</code>
+          
+          <code class="ruby">	# make sure he/she leaves after the first day of not finding anything</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="106">
           <span class="hits">1</span>
           
-          <code class="ruby">		game = Game.new 1, 1</code>
+          <code class="ruby">	def test_keep_searching_find_no_metals</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="107">
           <span class="hits">1</span>
           
-          <code class="ruby">		game.stub :keep_searching, true do</code>
+          <code class="ruby">		game = Game.new 1, 1</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="108">
           <span class="hits">1</span>
           
-          <code class="ruby">			game.search(1)</code>
+          <code class="ruby">		vert = Minitest::Mock::new &quot;vert 1&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="109">
           <span class="hits">1</span>
           
-          <code class="ruby">			refute_equal 5, game.loc</code>
+          <code class="ruby">		vert.expect :gold, 0</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="110">
+        <li class="covered" data-hits="1" data-linenumber="110">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">		end	</code>
+          <code class="ruby">		vert.expect :silver, 0</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="111">
+        <li class="covered" data-hits="1" data-linenumber="111">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">	end</code>
+          <code class="ruby">		vert.expect :name, &#39;Gold Saucer&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="112">
+        <li class="covered" data-hits="1" data-linenumber="112">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">	</code>
+          <code class="ruby">		game.keep_searching(vert, 1)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="113">
+        <li class="covered" data-hits="1" data-linenumber="113">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">	# This test ensures that the prospector only searches at 5 locations</code>
+          <code class="ruby">		assert_equal 1, game.days</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="114">
           
           
-          <code class="ruby">	# exactly. Once the counter exceeds this limit of 5 (i.e. 6), the search function</code>
+          <code class="ruby">	end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="115">
           
           
-          <code class="ruby">	# should caese entirely, therefore causing the loc variable to be six</code>
+          <code class="ruby">	</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="116">
           
           
-          <code class="ruby">	# when search halts.</code>
+          <code class="ruby">	# This test ensures that if the prospector finds one ounce</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="117">
           
           
+          <code class="ruby">	# of either silver or gold in his/her first three days of searching,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="118">
+          
+          
+          <code class="ruby">	# he/she will stay until no metals are found. With the specific seed generation of 1, </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="119">
+          
+          
+          <code class="ruby">	# the prospector will find one ounce of silver and gold in the first day,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="120">
+          
+          
+          <code class="ruby">	# then find nothing the second. We check to make sure he/she stays for the </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="121">
+          
+          
+          <code class="ruby">	# second day at Gold Saucer</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="122">
+          
+          
           <code class="ruby">	# EDGE CASE</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="118">
+        <li class="covered" data-hits="1" data-linenumber="123">
           <span class="hits">1</span>
           
-          <code class="ruby">	def test_search_six_iterations</code>
+          <code class="ruby">	def test_keep_searching_third_location</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="119">
+        <li class="covered" data-hits="1" data-linenumber="124">
           <span class="hits">1</span>
           
           <code class="ruby">		game = Game.new 1, 1</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="120">
+        <li class="covered" data-hits="1" data-linenumber="125">
           <span class="hits">1</span>
           
-          <code class="ruby">		game.stub :keep_searching, true do</code>
+          <code class="ruby">		vert = Minitest::Mock::new &quot;vert 1&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="121">
+        <li class="covered" data-hits="1" data-linenumber="126">
           <span class="hits">1</span>
           
-          <code class="ruby">			game.search(1)</code>
+          <code class="ruby">		vert.expect :gold, 1</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="122">
+        <li class="covered" data-hits="1" data-linenumber="127">
           <span class="hits">1</span>
           
-          <code class="ruby">			assert_equal 6, game.loc</code>
+          <code class="ruby">		vert.expect :gold, 0</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="123">
+        <li class="covered" data-hits="1" data-linenumber="128">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">		end	</code>
+          <code class="ruby">		vert.expect :silver, 1</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="124">
+        <li class="covered" data-hits="1" data-linenumber="129">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		vert.expect :silver, 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="130">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		vert.expect :name, &#39;Gold Saucer&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="131">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		vert.expect :name, &#39;Gold Saucer&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="132">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		game.keep_searching(vert, 3)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="133">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		refute_equal 1, game.days</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="134">
           
           
           <code class="ruby">	end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="125">
+        <li class="never" data-hits="" data-linenumber="135">
           
           
           <code class="ruby">	</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="126">
+        <li class="never" data-hits="" data-linenumber="136">
           
           
-          <code class="ruby">	#def test_search_next_site</code>
+          <code class="ruby">	# This test ensures that if the prospector finds one ounce or less</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="127">
+        <li class="never" data-hits="" data-linenumber="137">
           
           
-          <code class="ruby">		#game = Game.new 1, 1</code>
+          <code class="ruby">	# of either silver or gold in his/her last two days of searching,</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="128">
+        <li class="never" data-hits="" data-linenumber="138">
           
           
-          <code class="ruby">		#game.stub :keep_searching, true do</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="129">
-          
-          
-          <code class="ruby">			</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="130">
-          
-          
-          <code class="ruby">	</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="131">
-          
-          
-          <code class="ruby">	# This test checks to make sure the correct earnings are recorded</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="132">
-          
-          
-          <code class="ruby">	# for each prospector according to the given price per ounce of</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="133">
-          
-          
-          <code class="ruby">	# silver and gold.</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="134">
-          <span class="hits">1</span>
-          
-          <code class="ruby">	def test_end_shift_earnings</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="135">
-          <span class="hits">1</span>
-          
-          <code class="ruby">		game = Game.new 1, 1</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="136">
-          <span class="hits">1</span>
-          
-          <code class="ruby">		game.metals = [1, 1]</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="137">
-          <span class="hits">1</span>
-          
-          <code class="ruby">		game.end_shift(1.31, 20.67, 1)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="138">
-          <span class="hits">1</span>
-          
-          <code class="ruby">		assert_equal 21.98, game.earnings</code>
+          <code class="ruby">	# he/she will leave. With the specific seed generation of 1, the prospector will</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="139">
           
           
-          <code class="ruby">	end</code>
+          <code class="ruby">	# always only find one ounce of silver. We check to make sure he/she</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="140">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">	# leaves after only one day of searching.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="141">
+          
+          
+          <code class="ruby">	# EDGE CASE</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="142">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	def test_keep_searching_after_third_location</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="143">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		game = Game.new 1, 1</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="144">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		vert = Minitest::Mock::new &quot;vert 1&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="145">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		vert.expect :gold, 1</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="146">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		vert.expect :silver, 1</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="147">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		vert.expect :name, &#39;Gold Saucer&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="148">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		game.keep_searching(vert, 4)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="149">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		assert_equal 1, game.days</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="150">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="151">
+          
+          
+          <code class="ruby">	</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="152">
+          
+          
+          <code class="ruby">	# This test ensures that the correct plural form &#39;ounces&#39; is </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="153">
+          
+          
+          <code class="ruby">	# displayed when both silver and gold are zero when displaying</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="154">
+          
+          
+          <code class="ruby">	# the number of metals are found when the prospector is searching</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="155">
+          
+          
+          <code class="ruby">	# for metals at a location</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="156">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	def test_keep_searching_ounce</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="157">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		game = Game.new 1, 1</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="158">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		vert = Minitest::Mock::new &quot;vert 1&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="159">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		vert.expect :gold, 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="160">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		vert.expect :silver, 0</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="161">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		vert.expect :name, &#39;Gold Saucer&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="162">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		game.keep_searching(vert, 4)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="163">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		assert_equal &#39;ounces&#39;, game.goz</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="164">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		assert_equal &#39;ounces&#39;, game.soz</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="165">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="166">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="167">
+          
+          
+          <code class="ruby">	# This test checks to make sure the correct earnings are recorded</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="168">
+          
+          
+          <code class="ruby">	# for each prospector according to the given price per ounce of</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="169">
+          
+          
+          <code class="ruby">	# silver and gold.</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="170">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	def test_end_shift_earnings</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="171">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		game = Game.new 1, 1</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="172">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		game.metals = [1, 1]</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="173">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		game.end_shift(1.31, 20.67, 1)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="174">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		assert_equal &#39;21.98&#39;, game.earnings.to_s</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="175">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="176">
+          
+          
+          <code class="ruby">	</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="177">
+          
+          
+          <code class="ruby">	# This test ensures that the correct singular form &#39;ounce&#39; is </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="178">
+          
+          
+          <code class="ruby">	# displayed when both silver and gold are one when displaying</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="179">
+          
+          
+          <code class="ruby">	# the total number of metals found.</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="180">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	def test_end_shift_ounce</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="181">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		game = Game.new 1, 1</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="182">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		game.metals = [1, 1]</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="183">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		game.end_shift(1.31, 20.67, 1)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="184">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		assert &#39;ounce&#39;, game.goz</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="185">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		assert &#39;ounce&#39;, game.soz</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="186">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="187">
+          
+          
+          <code class="ruby">	</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="188">
+          
+          
+          <code class="ruby">	# This test ensures that the correct plural form &#39;ounces&#39; is </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="189">
+          
+          
+          <code class="ruby">	# displayed when both silver and gold are two when displaying</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="190">
+          
+          
+          <code class="ruby">	# the total number of metals found.</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="191">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	def test_end_shift_ounces</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="192">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		game = Game.new 1, 1</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="193">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		game.metals = [2, 2]</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="194">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		game.end_shift(1.31, 20.67, 1)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="195">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		assert &#39;ounces&#39;, game.goz</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="196">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		assert &#39;ounces&#39;, game.soz</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="197">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="198">
+          
+          
+          <code class="ruby">	</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="199">
+          
+          
+          <code class="ruby">	# This test ensures that two decimal places are displayed even</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="200">
+          
+          
+          <code class="ruby">	# if the earnings would round to only one decimal place normally.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="201">
+          
+          
+          <code class="ruby">	# With 10 gold pieces found, the actual amount would be 206.7, so</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="202">
+          
+          
+          <code class="ruby">	# so we would want the program to display 206.70 instead.</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="203">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	def test_end_shift_decimal</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="204">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		game = Game.new 1, 1</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="205">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		game.metals = [0, 10]</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="206">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		game.end_shift(1.31, 20.67, 1)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="207">
+          <span class="hits">1</span>
+          
+          <code class="ruby">		assert &#39;206.70&#39;, game.earnings.to_s</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="208">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="209">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="210">
           
           
           <code class="ruby">end</code>
@@ -2076,26 +2586,26 @@
           <code class="ruby">  def initialize(name, silver, gold)</code>
         </li>
       
-        <li class="covered" data-hits="80" data-linenumber="6">
-          <span class="hits">80</span>
+        <li class="covered" data-hits="122" data-linenumber="6">
+          <span class="hits">122</span>
           
           <code class="ruby">    @name = name</code>
         </li>
       
-        <li class="covered" data-hits="80" data-linenumber="7">
-          <span class="hits">80</span>
+        <li class="covered" data-hits="122" data-linenumber="7">
+          <span class="hits">122</span>
           
           <code class="ruby">    @neighbors = []</code>
         </li>
       
-        <li class="covered" data-hits="80" data-linenumber="8">
-          <span class="hits">80</span>
+        <li class="covered" data-hits="122" data-linenumber="8">
+          <span class="hits">122</span>
           
           <code class="ruby">    @silver = silver</code>
         </li>
       
-        <li class="covered" data-hits="80" data-linenumber="9">
-          <span class="hits">80</span>
+        <li class="covered" data-hits="122" data-linenumber="9">
+          <span class="hits">122</span>
           
           <code class="ruby">    @gold = gold</code>
         </li>
@@ -2148,8 +2658,8 @@
           <code class="ruby">  def initialize(verts)</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="18">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="19" data-linenumber="18">
+          <span class="hits">19</span>
           
           <code class="ruby">    @vertices = verts</code>
         </li>
@@ -2172,8 +2682,8 @@
           <code class="ruby">  def add_vertex(name, silver, gold)</code>
         </li>
       
-        <li class="covered" data-hits="77" data-linenumber="22">
-          <span class="hits">77</span>
+        <li class="covered" data-hits="119" data-linenumber="22">
+          <span class="hits">119</span>
           
           <code class="ruby">    @vertices &lt;&lt; Vertex.new(name, silver, gold)</code>
         </li>
@@ -2196,26 +2706,26 @@
           <code class="ruby">  def add_neighbor(start_name, end_name)</code>
         </li>
       
-        <li class="covered" data-hits="376" data-linenumber="26">
-          <span class="hits">376</span>
+        <li class="covered" data-hits="580" data-linenumber="26">
+          <span class="hits">580</span>
           
           <code class="ruby">    from = vertices.index { |v| v.name == start_name }</code>
         </li>
       
-        <li class="covered" data-hits="520" data-linenumber="27">
-          <span class="hits">520</span>
+        <li class="covered" data-hits="802" data-linenumber="27">
+          <span class="hits">802</span>
           
           <code class="ruby">    to   = vertices.index { |v| v.name == end_name }</code>
         </li>
       
-        <li class="covered" data-hits="89" data-linenumber="28">
-          <span class="hits">89</span>
+        <li class="covered" data-hits="137" data-linenumber="28">
+          <span class="hits">137</span>
           
           <code class="ruby">    vertices[from].neighbors[to] = true</code>
         </li>
       
-        <li class="covered" data-hits="89" data-linenumber="29">
-          <span class="hits">89</span>
+        <li class="covered" data-hits="137" data-linenumber="29">
+          <span class="hits">137</span>
           
           <code class="ruby">    vertices[to].neighbors[from] = true</code>
         </li>

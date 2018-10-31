@@ -1,18 +1,18 @@
 require_relative 'graph.rb'
 # Documentation for class
 class Game
-  attr_accessor :seed, :prospectors, :metals, :earnings, :days, :loc, :iterations
+  attr_accessor :seed, :prospectors, :metals, :earnings, :days, :loc, :iterations, :goz, :soz
 
   def initialize(seed, num_prospectors)
     srand seed
     @seed = rand(seed)
     @prospectors = num_prospectors
     @g = Graph.new []
-		create_map(@g)
+    create_map(@g)
     @days = 0
     @metals = [0, 0]
     @r = Random.new(@seed)
-		@earnings = 0
+    @earnings = 0
   end
 
   def play_game
@@ -20,7 +20,7 @@ class Game
     loop do
       @iterations += 1
       search(@iterations)
-			end_shift(1.31, 20.67, @iterations)
+      end_shift(1.31, 20.67, @iterations)
       break if @iterations == @prospectors
     end
   end
@@ -55,9 +55,11 @@ class Game
       break if @loc > 5
 
       if @loc != 1
-        goz = 'ounce(s)'
-        soz = 'ounce(s)'
-        puts 'Heading from ' + pre_vert.name + ' to ' + vert.name + ', holding ' + @metals[1].to_s + ' ' + goz + ' of gold and ' + @metals[0].to_s + ' ' + soz + ' of silver.'
+        @goz = 'ounce' if @metals[1] == 1
+        @goz = 'ounces' if @metals[1] != 1
+        @soz = 'ounce' if @metals[0] == 1
+        @soz = 'ounces' if @metals[0] != 1
+        puts 'Heading from ' + pre_vert.name + ' to ' + vert.name + ', holding ' + @metals[1].to_s + ' ' + @goz + ' of gold and ' + @metals[0].to_s + ' ' + @soz + ' of silver.'
       end
       keep_searching(vert, loc)
       loop do
@@ -72,6 +74,8 @@ class Game
   end
 
   def keep_searching(vert, loc)
+    @goz = 'ounces'
+    @soz = 'ounces'
     ks = true
     g = 0
     s = 0
@@ -89,20 +93,32 @@ class Game
         puts "\t" + 'No precious metals were found'
         ks = false
       elsif g > 0 && s.zero?
-        puts "\t" + 'Found ' + g.to_s + ' ounce(s) of gold in ' + vert.name + '.'
+        @goz = 'ounce' if g == 1
+        @goz = 'ounces' if g != 1
+        puts "\t" + 'Found ' + g.to_s + ' ' + @goz + ' of gold in ' + vert.name + '.'
       elsif s > 0 && g.zero?
-        puts "\t" + 'Found ' + s.to_s + ' ounce(s) of silver in ' + vert.name + '.'
+        @soz = 'ounce' if s == 1
+        @soz = 'ounces' if s != 1
+        puts "\t" + 'Found ' + s.to_s + ' ' + @soz + ' of silver in ' + vert.name + '.'
       else
-        puts "\t" + 'Found ' + g.to_s + ' ounce(s) of gold and ' + s.to_s + 'ounce(s) of silver in ' + vert.name + '.'
+        @goz = 'ounce' if g == 1
+        @goz = 'ounces' if g != 1
+        @soz = 'ounce' if s == 1
+        @soz = 'ounces' if s != 1
+        puts "\t" + 'Found ' + g.to_s + ' ' + @goz + ' of gold and ' + s.to_s + ' ' + @soz + ' of silver in ' + vert.name + '.'
       end
     end
   end
 
   def end_shift(silverp, goldp, prospector)
-    @earnings = @metals[0] * silverp + @metals[1] * goldp
+    @goz = 'ounce' if @metals[1] == 1
+    @goz = 'ounces' if @metals[1] != 1
+    @soz = 'ounce' if @metals[0] == 1
+    @soz = 'ounces' if @metals[0] != 1
+    @earnings = '%.2f' % (@metals[0] * silverp + @metals[1] * goldp)
     puts 'After ' + @days.to_s + ' days, Prospector #' + prospector.to_s + ' returned to San Francisco with: '
-    puts "\t" + @metals[1].to_s + ' ounce(s) of gold.'
-    puts "\t" + @metals[0].to_s + ' ounce(s) of silver.'
-    puts "\t" + 'Heading home with $' + earnings.round(2).to_s + '.'
+    puts "\t" + @metals[1].to_s + ' ' + @goz + ' of gold.'
+    puts "\t" + @metals[0].to_s + ' ' + @soz + ' of silver.'
+    puts "\t" + 'Heading home with $' + @earnings.to_s + '.'
   end
 end

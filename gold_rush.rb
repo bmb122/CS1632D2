@@ -9,7 +9,6 @@ if valid_args
   a1 = Integer(ARGV[1])
   g = Game.new a0, a1
   g.play_game
-	
 else
   show_usage
   exit 1

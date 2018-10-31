@@ -45,6 +45,58 @@ class GameTest < Minitest::Test
 		assert g.vertices[5].neighbors[6]
 	end
 	
+	# This test ensures that the prospector searches 5 locations
+	# exactly. Once the counter exceeds this limit of 5, the search function
+	# should caese entirely.
+	# EDGE CASE
+	def test_search_five_iterations
+		game = Game.new 1, 1
+		game.stub :keep_searching, true do
+			game.search(1)
+			refute_equal 5, game.loc
+		end	
+	end
+	
+	# This test ensures that the prospector only searches at 5 locations
+	# exactly. Once the counter exceeds this limit of 5 (i.e. 6), the search function
+	# should caese entirely, therefore causing the loc variable to be six
+	# when search halts.
+	# EDGE CASE
+	def test_search_six_iterations
+		game = Game.new 1, 1
+		game.stub :keep_searching, true do
+			game.search(1)
+			assert_equal 6, game.loc
+		end	
+	end
+	
+	# This test ensures that the correct singular form 'ounce' is 
+	# displayed when both silver and gold are one when displaying
+	# the number of metals are found when the prospector is moving
+	# from one location to another.
+	def test_search_ounce
+		game = Game.new 1, 1
+		game.metals = [1, 1]
+		game.stub :keep_searching, true do
+			game.search(1)
+			assert 'ounce', game.goz
+			assert 'ounce', game.soz
+		end	
+	end
+	
+	# This test ensures that the correct plural form 'ounces' is 
+	# displayed when both silver and gold are two when displaying
+	# the number of metals are found when the prospector is moving
+	# from one location to another.
+	def test_search_ounces
+		game = Game.new 1, 1
+		game.metals = [2, 2]
+		game.stub :keep_searching, true do
+			game.search(1)
+			assert 'ounces', game.goz
+			assert 'ounces', game.soz
+		end	
+	end
 	
 	# This test ensures that if the prospector finds 0 ounces
 	# of either silver or gold while searching,
@@ -97,32 +149,21 @@ class GameTest < Minitest::Test
 		assert_equal 1, game.days
 	end
 	
-	
-	# This test ensures that the prospector searches 5 locations
-	# exactly. Once the counter exceeds this limit of 5, the search function
-	# should caese entirely.
-	# EDGE CASE
-	def test_search_five_iterations
+	# This test ensures that the correct plural form 'ounces' is 
+	# displayed when both silver and gold are zero when displaying
+	# the number of metals are found when the prospector is searching
+	# for metals at a location
+	def test_keep_searching_ounce
 		game = Game.new 1, 1
-		game.stub :keep_searching, true do
-			game.search(1)
-			refute_equal 5, game.loc
-		end	
+		vert = Minitest::Mock::new "vert 1"
+		vert.expect :gold, 0
+		vert.expect :silver, 0
+		vert.expect :name, 'Gold Saucer'
+		game.keep_searching(vert, 4)
+		assert_equal 'ounces', game.goz
+		assert_equal 'ounces', game.soz
 	end
-	
-	# This test ensures that the prospector only searches at 5 locations
-	# exactly. Once the counter exceeds this limit of 5 (i.e. 6), the search function
-	# should caese entirely, therefore causing the loc variable to be six
-	# when search halts.
-	# EDGE CASE
-	def test_search_six_iterations
-		game = Game.new 1, 1
-		game.stub :keep_searching, true do
-			game.search(1)
-			assert_equal 6, game.loc
-		end	
-	end
-	
+
 	# This test checks to make sure the correct earnings are recorded
 	# for each prospector according to the given price per ounce of
 	# silver and gold.
@@ -130,7 +171,40 @@ class GameTest < Minitest::Test
 		game = Game.new 1, 1
 		game.metals = [1, 1]
 		game.end_shift(1.31, 20.67, 1)
-		assert_equal 21.98, game.earnings
+		assert_equal '21.98', game.earnings.to_s
+	end
+	
+	# This test ensures that the correct singular form 'ounce' is 
+	# displayed when both silver and gold are one when displaying
+	# the total number of metals found.
+	def test_end_shift_ounce
+		game = Game.new 1, 1
+		game.metals = [1, 1]
+		game.end_shift(1.31, 20.67, 1)
+		assert 'ounce', game.goz
+		assert 'ounce', game.soz
+	end
+	
+	# This test ensures that the correct plural form 'ounces' is 
+	# displayed when both silver and gold are two when displaying
+	# the total number of metals found.
+	def test_end_shift_ounces
+		game = Game.new 1, 1
+		game.metals = [2, 2]
+		game.end_shift(1.31, 20.67, 1)
+		assert 'ounces', game.goz
+		assert 'ounces', game.soz
+	end
+	
+	# This test ensures that two decimal places are displayed even
+	# if the earnings would round to only one decimal place normally.
+	# With 10 gold pieces found, the actual amount would be 206.7, so
+	# so we would want the program to display 206.70 instead.
+	def test_end_shift_decimal
+		game = Game.new 1, 1
+		game.metals = [0, 10]
+		game.end_shift(1.31, 20.67, 1)
+		assert '206.70', game.earnings.to_s
 	end
 
 end
